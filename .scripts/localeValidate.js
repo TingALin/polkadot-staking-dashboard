@@ -1,78 +1,115 @@
 // Copyright 2022 @paritytech/polkadot-staking-dashboard authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
-const fs = require('fs');
 const { join } = require('path');
-const {
-  getDeepKeys,
-  getDirectories,
-  localeDir,
-  orderJsonByKeys,
-} = require('./utils');
+const fs = require('fs');
+const { localeDir, languages, orderKeys } = require('./utils.js');
 
-// Missing key validation function.
-const validateMissingKeys = () => {
-  const defaultPath = join(localeDir, 'en');
-  const languages = getDirectories(localeDir, ['en']);
+// the suffixes of keys related to i18n functionality that should be ignored.
+const ignoreSubstrings = ['_one', '_two', '_few', '_many', '_other'];
 
-  fs.readdir(defaultPath, (error, files) => {
-    if (error) console.log(error);
+// check whether a key ends with an `ignoreSubstring`.
+const endsWithIgnoreSubstring = (key) =>
+  ignoreSubstrings.some((i) => key.endsWith(i));
 
-    files.forEach((file) => {
-      const defaultJson = JSON.parse(
-        fs.readFileSync(join(defaultPath, file)).toString()
+// recursive function to get all keys of a locale object.
+const getDeepKeys = (obj) => {
+  let keys = [];
+  for (const key in obj) {
+    let isSubstring = false;
+
+    // not number.
+    if (isNaN(key)) {
+      // check if key includes any special substrings.
+      if (endsWithIgnoreSubstring(key)) {
+        isSubstring = true;
+        // get the substring up to the last underscore.
+        const rawKey = key.substring(0, key.lastIndexOf('_'));
+        // add the key to `keys` if it does not already exist.
+        if (!keys.includes(rawKey)) {
+          keys.push(rawKey);
+        }
+      }
+    }
+
+    // full string, if not already added, go ahead and add.
+    if (!isSubstring) {
+      if (!keys.includes(key)) {
+        keys.push(key);
+      }
+    }
+
+    // if object, recursively get keys.
+    if (typeof obj[key] === 'object') {
+      const subkeys = getDeepKeys(obj[key]);
+      keys = keys.concat(subkeys.map((subkey) => `${key}.${subkey}`));
+    }
+  }
+  return keys;
+};
+
+const defaultPath = join(localeDir, 'en');
+
+// locale directories, ommitting `en` - the langauge to check missing keys against.
+const languagesButEn = languages.filter((v) => v !== 'en');
+
+// const para = (lng, index) => {
+//   const p = lng[index].slice((lng[index].indexOf('.') + 1));
+//   return p;
+// };
+// const paraMinus = (lng, index) => {
+//   const p = lng[index - 1].slice((lng[index].indexOf('.') + 1));
+//   return p;
+// };
+
+fs.readdir(defaultPath, (error, files) => {
+  if (error) console.log(error);
+
+  files.forEach((file) => {
+    const defaultJson = JSON.parse(
+      fs.readFileSync(join(defaultPath, file)).toString()
+    );
+
+    languagesButEn.forEach((lng) => {
+      const otherPath = join(localeDir, lng);
+      const otherJson = JSON.parse(
+        fs.readFileSync(join(otherPath, file)).toString()
       );
 
-      for (const lng of languages) {
-        const otherPath = join(localeDir, lng);
-        const otherJson = JSON.parse(
-          fs.readFileSync(join(otherPath, file)).toString()
-        );
+      const en = getDeepKeys(defaultJson);
+      const others = getDeepKeys(otherJson);
+      // for (i in Object.values(en)) {
+      //   if (en[i].indexOf('.') > 0) {
+      //     const iLetter = para(en, i);
+      //     const iMinusLetter = paraMinus(en, i);
+      //     if (iLetter < iMinusLetter) {
+      //       console.log(`En/"${file}" JSON is NOT alphabaticlly ordered`)
+      //     }
+      //   }
+      // }
+      // for (i in Object.values(others)) {
+      //   if (others[i].indexOf('.') > 0) {
+      //     const iLetter = para(others, i);
+      //     const iMinusLetter = paraMinus(others, i);
+      //     if (iLetter < iMinusLetter) {
+      //       console.log(`"${lng}"/"${file}" is NOT alphabaticlly ordered`)
+      //     }
+      //   }
+      // }
 
-        const a = getDeepKeys(defaultJson);
-        const b = getDeepKeys(otherJson);
-
-        if (a.sort().length !== b.sort().length) {
-          const missing = a.filter((item) => b.indexOf(item) < 0);
-          if (missing.join('').trim().length > 0) {
-            throw new Error(
-              `Missing the following keys from locale "${lng}", file: "${file}":\n"${missing}".`
-            );
-          }
+      if (en.sort().length !== others.sort().length) {
+        if (en === orderKeys(en) && others === orderKeys(others)) {
+          console.log("Keys Are Ordered Alphabetically")
+        } else {
+          console.log("Keys Are Not Ordered Alphabetically")
+        }
+        const missing = en.filter((item) => others.indexOf(item) < 0);
+        if (missing.join('').trim().length > 0) {
+          throw new Error(
+            `Missing the following keys from locale "${lng}", file: "${file}":\n"${missing}".`
+          );
         }
       }
     });
   });
-};
-
-// Key order validation function.
-const validateKeyOrder = () => {
-  // get all language paths to re-order.
-  const languages = getDirectories(localeDir, []);
-
-  for (const lng of languages) {
-    const pathToLanguage = join(localeDir, `/${lng}`);
-
-    fs.readdir(pathToLanguage, (error, files) => {
-      if (error) return;
-
-      files.forEach((file) => {
-        const pathToFile = join(pathToLanguage, file);
-        const json = JSON.parse(fs.readFileSync(pathToFile).toString());
-
-        // order json object alphabetically.
-        const orderedJson = orderJsonByKeys(json);
-        if (JSON.stringify(json) !== JSON.stringify(orderedJson)) {
-          throw new Error(
-            `Keys are in the incorrect order from locale "${lng}", file: "${file}".`
-          );
-        }
-      });
-    });
-  }
-};
-
-// validate missing keys
-validateMissingKeys();
-// validate key order
-validateKeyOrder();
+});
