@@ -25,6 +25,7 @@ import { BalanceChart } from './BalanceChart';
 import { BalanceLinks } from './BalanceLinks';
 import { NetworkStats } from './NetworkSats';
 import { Payouts } from './Payouts';
+import { ProxyAccounts } from './ProxyAccounts';
 import { StakeStatus } from './StakeStatus';
 import { ActiveEraStat } from './Stats/ActiveEraTimeLeft';
 import { HistoricalRewardsRateStat } from './Stats/HistoricalRewardsRate';
@@ -66,6 +67,7 @@ export const Overview = () => {
         <TopBarWrapper>
           <ActiveAccount />
         </TopBarWrapper>
+        <ProxyAccounts />
       </PageRowWrapper>
       <StatBoxList>
         <HistoricalRewardsRateStat />
