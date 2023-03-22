@@ -3,9 +3,12 @@
 
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { remToUnit } from 'Utils';
 import { useProxies } from 'contexts/Accounts/Proxies';
 import type { Proxy } from 'contexts/Accounts/Proxies/type';
 import { useConnect } from 'contexts/Connect';
+import { Identicon } from 'library/Identicon';
+import { ProxyAccountWrapper, ProxyWrapper } from './Wrappers';
 
 export const ProxyAccounts = () => {
   const { proxies } = useProxies();
@@ -14,23 +17,32 @@ export const ProxyAccounts = () => {
   const proxyList = proxies.find((p: Proxy) => p.delegator === activeAccount);
 
   return (
-    <div>
+    <ProxyAccountWrapper>
       {proxies.length > 0 &&
         proxyList?.delegates.map((d, index) => {
           return (
             <div key={index}>
-              {/* Every React element in a list should have a key assigned to it. The key is an HTML attribute and should be a stable identifier. */}
-              {getAccount(d.delegate)?.name}| {d.proxyType}{' '}
-              {d.proxyType === 'Any' || d.proxyType === 'Staking' ? (
-                <span>
-                  <FontAwesomeIcon icon={faHeart} />
+              <ProxyWrapper>
+                {/* Every React element in a list should have a key assigned to it. The key is an HTML attribute and should be a stable identifier. */}
+                {d.proxyType} |
+                <span className="identicon">
+                  <Identicon
+                    value={d.delegate}
+                    size={remToUnit('1.05rem') * 1.4}
+                  />
                 </span>
-              ) : (
-                <></>
-              )}
+                {getAccount(d.delegate)?.name}
+                {d.proxyType === 'Any' || d.proxyType === 'Staking' ? (
+                  <span>
+                    <FontAwesomeIcon icon={faHeart} />
+                  </span>
+                ) : (
+                  <></>
+                )}
+              </ProxyWrapper>
             </div>
           );
         })}
-    </div>
+    </ProxyAccountWrapper>
   );
 };

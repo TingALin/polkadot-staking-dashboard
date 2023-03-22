@@ -117,3 +117,31 @@ export const MoreWrapper = styled.div`
     margin-top: 0.1rem;
   }
 `;
+
+export const ProxyAccountWrapper = styled.div`
+  display: flex;
+  /* flex-flow: row wrap; */
+`;
+
+export const ProxyWrapper = styled.button`
+  border: 1px solid var(--border-primary-color);
+  border-radius: 1.25rem;
+  color: var(--text-color-secondary);
+  background: var(--button-secondary-background);
+  font-size: 1.05rem;
+  cursor: default;
+  box-shadow: none;
+  max-width: 225px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 0.3rem 1rem;
+  transition: transform 0.15s ease-out;
+  &:hover {
+    transform: scale(1.03);
+  }
+  margin: 0.15rem 0.25rem 0 0;
+  .identicon {
+    margin: 0.15rem 0.25rem 0.15rem 0.25rem;
+  }
+`;

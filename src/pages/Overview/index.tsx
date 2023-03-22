@@ -66,8 +66,8 @@ export const Overview = () => {
       <PageRowWrapper className="page-padding" noVerticalSpacer>
         <TopBarWrapper>
           <ActiveAccount />
+          <ProxyAccounts />
         </TopBarWrapper>
-        <ProxyAccounts />
       </PageRowWrapper>
       <StatBoxList>
         <HistoricalRewardsRateStat />
