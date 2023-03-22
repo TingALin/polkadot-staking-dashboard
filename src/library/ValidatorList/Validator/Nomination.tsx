@@ -52,6 +52,7 @@ export const Nomination = ({
           </div>
         </div>
         <Separator />
+
         <div className="row status">
           <NominationStatus
             address={address}

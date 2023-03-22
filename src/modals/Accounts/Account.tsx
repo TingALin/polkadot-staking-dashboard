@@ -10,7 +10,7 @@ import { useExtensions } from 'contexts/Extensions';
 import type { ExtensionInjected } from 'contexts/Extensions/types';
 import { useModal } from 'contexts/Modal';
 import { Identicon } from 'library/Identicon';
-import { AccountWrapper } from './Wrappers';
+import { AccountWrapper, ProxiedAccountsWrapper } from './Wrappers';
 import type { AccountItemProps } from './types';
 
 export const AccountButton = (props: AccountItemProps) => {
@@ -79,13 +79,14 @@ export const AccountInner = ({
         proxiedAccounts.map((d, index) => {
           return (
             <>
-              <div key={index}>
-                {getAccount(d.address)?.name} |{d.proxyType}
-              </div>
+              <ProxiedAccountsWrapper>
+                <div key={index}>
+                  &nbsp; {d.proxyType} | {getAccount(d.address)?.name}
+                </div>
+              </ProxiedAccountsWrapper>
             </>
           );
         })}
-
       <div className={label === undefined ? `` : label[0]}>
         {label !== undefined ? <h5>{label[1]}</h5> : null}
         {Icon !== undefined ? <Icon className="icon" /> : null}

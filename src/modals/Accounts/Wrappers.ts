@@ -92,3 +92,7 @@ export const AccountSeparator = styled.div`
   width: 100%;
   height: 0.5rem;
 `;
+
+export const ProxiedAccountsWrapper = styled.div`
+  color: green;
+`;
