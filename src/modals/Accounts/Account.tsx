@@ -4,6 +4,7 @@
 import { faGlasses } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { clipAddress } from 'Utils';
+import { useProxies } from 'contexts/Accounts/Proxies';
 import { useConnect } from 'contexts/Connect';
 import { useExtensions } from 'contexts/Extensions';
 import type { ExtensionInjected } from 'contexts/Extensions/types';
@@ -53,6 +54,9 @@ export const AccountInner = ({
   const Icon = extension?.icon ?? undefined;
   const source = meta?.source ?? undefined;
   const imported = meta !== undefined && source !== 'external';
+  const { getProxiedAccounts } = useProxies();
+  const proxiedAccounts = getProxiedAccounts(address ?? '');
+  const { getAccount } = useConnect();
 
   return (
     <>
@@ -70,6 +74,17 @@ export const AccountInner = ({
           Read Only
         </div>
       )}
+
+      {proxiedAccounts.length > 0 &&
+        proxiedAccounts.map((d, index) => {
+          return (
+            <>
+              <div key={index}>
+                {getAccount(d.address)?.name} |{d.proxyType}
+              </div>
+            </>
+          );
+        })}
 
       <div className={label === undefined ? `` : label[0]}>
         {label !== undefined ? <h5>{label[1]}</h5> : null}
