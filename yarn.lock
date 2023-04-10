@@ -949,10 +949,10 @@
     tslib "^2.5.0"
     ws "^8.13.0"
 
-"@polkadotcloud/core-ui@0.2.16":
-  version "0.2.16"
-  resolved "https://registry.yarnpkg.com/@polkadotcloud/core-ui/-/core-ui-0.2.16.tgz#086f0d8bc5eb836592c696eb35a6445e9aa05435"
-  integrity sha512-/WBL1tS9RM7K0I8pUHbEOFko60wh2uapAsmx5L0xumZ7Bh0oNeCk0V+e8ko0cKUFIn70SNMvjpAsrJUsWgXNZQ==
+"@polkadotcloud/core-ui@0.2.17":
+  version "0.2.17"
+  resolved "https://registry.yarnpkg.com/@polkadotcloud/core-ui/-/core-ui-0.2.17.tgz#bd107f686b08aafd508325a6642f44d458b9530e"
+  integrity sha512-vYd1NHEthf1lW6oxk+4rW8eR38UbHVHvqknlrtAwIKCnSVTSuP77i6OHzpIvBIRiJQ6/Z08JixocaqKk39oQ+w==
 
 "@polkadotcloud/utils@^0.2.14":
   version "0.2.14"
