@@ -1507,10 +1507,10 @@
   resolved "https://registry.npmjs.org/@polkadot-cloud/community/-/community-0.1.10.tgz#d2a99190c0a89a67275264084e6e750269990986"
   integrity sha512-VT38rqOvORuYdPLigS8UNwvitoc0DFZWEazsvHxz9bTnPBL/7M3LujWXO14OSGw+FTvfz4RzPwovmW4u7RoT/Q==
 
-"@polkadot-cloud/core@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.npmjs.org/@polkadot-cloud/core/-/core-0.0.5.tgz#7c30b7e02a68ee686bef67d7aa7126c9d13beb53"
-  integrity sha512-a0kV6G4mzZobHv9MV20EkkfsKELfHygFII8TjjTCotqy++7omYDNdNiXAV/UBg5pVKWQljL2W/Kq0eBtiSd/cg==
+"@polkadot-cloud/core@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/core/-/core-0.1.1.tgz#7a185ba672da1cd6dc9e1d2677c641020177403a"
+  integrity sha512-MM7CPYbtm7eAqmOm7sIKynADgGf++GMFl9jE0k+lITopXhQ7lCAxAHElzl6TDP/bnHf12RxuMpTRfQyFoLxP0w==
 
 "@polkadot-cloud/react@^0.1.2":
   version "0.1.2"
