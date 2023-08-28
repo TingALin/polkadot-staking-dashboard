@@ -1507,20 +1507,34 @@
   resolved "https://registry.npmjs.org/@polkadot-cloud/community/-/community-0.1.10.tgz#d2a99190c0a89a67275264084e6e750269990986"
   integrity sha512-VT38rqOvORuYdPLigS8UNwvitoc0DFZWEazsvHxz9bTnPBL/7M3LujWXO14OSGw+FTvfz4RzPwovmW4u7RoT/Q==
 
+"@polkadot-cloud/core@0.1.6":
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/core/-/core-0.1.6.tgz#c82934fdbc1fd5e9759de30f2bb6881cec2a5bf4"
+  integrity sha512-4nftY+1sXXG4qauZhlagafdWsBLewnuk+UtqA8z5AIADr2QmEfsuQMBXIwsAZIaHPvP2/VfjCwLEBKQR3uWAow==
+
 "@polkadot-cloud/core@^0.0.5":
   version "0.0.5"
   resolved "https://registry.npmjs.org/@polkadot-cloud/core/-/core-0.0.5.tgz#7c30b7e02a68ee686bef67d7aa7126c9d13beb53"
   integrity sha512-a0kV6G4mzZobHv9MV20EkkfsKELfHygFII8TjjTCotqy++7omYDNdNiXAV/UBg5pVKWQljL2W/Kq0eBtiSd/cg==
 
-"@polkadot-cloud/react@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.npmjs.org/@polkadot-cloud/react/-/react-0.1.2.tgz#6ede7e72e13f7e021f7b42b1d2ea84738b22555f"
-  integrity sha512-3hGFOYlfOfBtrrguiBh/Hk+51Z7BTdEWvLY8WHswsPYlk/1qNoNIRtW7tr1gFs6cJm3BBOWqNUp0lurIQ3KxPQ==
+"@polkadot-cloud/react@^0.1.20":
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/react/-/react-0.1.20.tgz#0386f58edb11617f074bc754b454ea2bef693ee8"
+  integrity sha512-K2d+YzPGfHF/eZ1TU7264VGKGpqEtg07nYCbmpThXCFnrPkO/oe9UT5ym/7Rpzq4aNSugIJ6YXtUL8UPCCheSQ==
+  dependencies:
+    "@polkadot-cloud/core" "0.1.6"
+    "@polkadot-cloud/utils" "^0.0.4"
+    react-error-boundary "^4.0.11"
 
 "@polkadot-cloud/utils@^0.0.1":
   version "0.0.1"
   resolved "https://registry.npmjs.org/@polkadot-cloud/utils/-/utils-0.0.1.tgz#24b0d569c4637e4d539ba3a2c669339144162133"
   integrity sha512-YWSQ/sPRwVcO1LBJAVS7E7TI+dYpVY/Oe/sDwLThMVaVXzaIx18tBBhoEXXU85a8N0bXJHYVOMIWoCnAem4ZJw==
+
+"@polkadot-cloud/utils@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/utils/-/utils-0.0.4.tgz#660d5ea9dbf6548f0f7ae9d0d4b86e6016d90c23"
+  integrity sha512-cSjaNcB/DgmKjG+VUJuA/wOBvUqsBRIr7KhVfJgD6tozqCyyHUgVO041T2uQioX+HauExO+5/wOVExthtS4ewQ==
 
 "@polkadot/api-augment@10.9.1":
   version "10.9.1"
