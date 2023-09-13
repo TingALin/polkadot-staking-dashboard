@@ -1453,10 +1453,10 @@
   resolved "https://registry.npmjs.org/@polkadot-cloud/community/-/community-0.1.11.tgz#62f57c92d663f758bdee2b1a2147b74dd3de4971"
   integrity sha512-R2ncl5idtiRfzA0a/Lo1j7HHo/4ztatz7xbnP9TPDMYk1JWCtoy77APnFLLukIUbGQGxw1kDVCP8U4X9KrZMKQ==
 
-"@polkadot-cloud/core@^0.1.13", "@polkadot-cloud/core@^0.1.17":
-  version "0.1.17"
-  resolved "https://registry.npmjs.org/@polkadot-cloud/core/-/core-0.1.17.tgz#a3978a52199d6e48c0a103cfe26fc1bcf9d89063"
-  integrity sha512-akjtK4s7oom2Qkp2AfJ2JgMV8z2tFSCdbkdJmYe5L3nl4vUR24Sls7Juyy8k9S5l9AyeJj1ujTV9swu/8nYNHw==
+"@polkadot-cloud/core@^0.1.13", "@polkadot-cloud/core@^0.1.18":
+  version "0.1.18"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/core/-/core-0.1.18.tgz#2a6259d6aa854e313d0c58ab22883cd462e1990f"
+  integrity sha512-tF+I+DO9eMYVybbrqtzgfBsajykJGYR0m7Kk10+obzQpxh3vN0TCAeOlpc0DUln2M9djhyEmyNtS9LAbKfwDUQ==
 
 "@polkadot-cloud/react@^0.1.34":
   version "0.1.34"
@@ -2552,9 +2552,10 @@ binary-extensions@^2.0.0:
   resolved "https://registry.npmjs.org/binary-extensions/-/binary-extensions-2.2.0.tgz#75f502eeaf9ffde42fc98829645be4ea76bd9e2d"
   integrity sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==
 
-"bip32-ed25519@git+https://github.com/Zondax/bip32-ed25519.git":
+"bip32-ed25519@https://github.com/Zondax/bip32-ed25519":
   version "0.0.4"
-  resolved "git+https://github.com/Zondax/bip32-ed25519.git#0949df01b5c93885339bc28116690292088f6134"
+  uid "0949df01b5c93885339bc28116690292088f6134"
+  resolved "https://github.com/Zondax/bip32-ed25519#0949df01b5c93885339bc28116690292088f6134"
   dependencies:
     bn.js "^5.1.1"
     elliptic "^6.4.1"
