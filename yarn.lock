@@ -1848,13 +1848,13 @@
     eventemitter3 "^4.0.7"
     smoldot "1.0.4"
 
-"@substrate/connect@^0.7.31":
-  version "0.7.31"
-  resolved "https://registry.npmjs.org/@substrate/connect/-/connect-0.7.31.tgz#a815acdf727e1e49815c7faee5acf049743aa339"
-  integrity sha512-a6D1Yjk5b2D5QJn1HZEN/6J9Kk5YROO0AxfY7apFamkYJCePfKkCsBrergOFAk1ZC3x1FhGdSxUvfYyqPq8knw==
+"@substrate/connect@^0.7.32":
+  version "0.7.32"
+  resolved "https://registry.yarnpkg.com/@substrate/connect/-/connect-0.7.32.tgz#a556ca0f5de568c64f9a9ebd7a7aabf515f7a64b"
+  integrity sha512-CdudmCTjYIYp9WufFdRZOxUE3zWxm3eXZpFqylETY2cuaLZrWBHDIyHyUm59fadEbZaezKW8iAs+4VZbx7ItqA==
   dependencies:
     "@substrate/connect-extension-protocol" "^1.0.1"
-    smoldot "1.0.13"
+    smoldot "2.0.1"
 
 "@substrate/ss58-registry@^1.43.0":
   version "1.43.0"
@@ -5351,19 +5351,19 @@ slash@^3.0.0:
   resolved "https://registry.npmjs.org/slash/-/slash-3.0.0.tgz#6539be870c165adbd5240220dbe361f1bc4d4634"
   integrity sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==
 
-smoldot@1.0.13:
-  version "1.0.13"
-  resolved "https://registry.npmjs.org/smoldot/-/smoldot-1.0.13.tgz#582276d94159a3ddace3c4979cc3000141852d2c"
-  integrity sha512-IxOBMzsPles/8JlFM7Sm1ckunul3e6mYWBopf+Kg7zHmxtRwpox4nnEfaGxmhhHC8JgQVwsVPHa14AeQxtk6vA==
-  dependencies:
-    ws "^8.8.1"
-
 smoldot@1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/smoldot/-/smoldot-1.0.4.tgz#e4c38cedad68d699a11b5b9ce72bb75c891bfd98"
   integrity sha512-N3TazI1C4GGrseFH/piWyZCCCRJTRx2QhDfrUKRT4SzILlW5m8ayZ3QTKICcz1C/536T9cbHHJyP7afxI6Mi1A==
   dependencies:
     pako "^2.0.4"
+    ws "^8.8.1"
+
+smoldot@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/smoldot/-/smoldot-2.0.1.tgz#c899cbb0827a010d3ca7944034f081786f533a4d"
+  integrity sha512-Wqw2fL/sELQByLSeeTX1Z/d0H4McmphPMx8vh6UZS/bIIDx81oU7s/drmx2iL/ME36uk++YxpRuJey8/MOyfOA==
+  dependencies:
     ws "^8.8.1"
 
 "source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.2:
