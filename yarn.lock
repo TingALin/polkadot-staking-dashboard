@@ -210,6 +210,13 @@
     "@polkadot/extension-inject" "^0.46.5"
     "@polkadot/types-augment" "^10.9.1"
 
+"@chainsafe/metamask-polkadot-types@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@chainsafe/metamask-polkadot-types/-/metamask-polkadot-types-0.6.0.tgz#e6e950024c363e076ba6727c3b1b8b57eb6c29b0"
+  integrity sha512-DhLNF2LcybGMOs3aBMh5iIAqEw0/a2W6mb5FccOGVTYQqT6W/lcwKC5Ves4KmpGbH/DtNJdbC0L9YMS0F8bXEg==
+  dependencies:
+    "@polkadot/api" "^10.9.1"
+
 "@dotlottie/player-component@^2.7.0":
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/@dotlottie/player-component/-/player-component-2.7.0.tgz#b7f5edfa9a54a0d99eb5cd85b94f0aebcd9270b3"
@@ -501,22 +508,37 @@
     rxjs "6"
     semver "^7.3.5"
 
+"@ledgerhq/devices@^8.0.8":
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/devices/-/devices-8.0.8.tgz#cd233eb54a044913160c9183be9fb22adae4e071"
+  integrity sha512-0j7E8DY2jeSSATc8IJk+tXDZ9u+Z7tXxB8I4TzXrfV/8A5exMh/K1IwX6Jt1zlw1wre4CT9MV4mzUs3M/TE7lg==
+  dependencies:
+    "@ledgerhq/errors" "^6.15.0"
+    "@ledgerhq/logs" "^6.11.0"
+    rxjs "^7.8.1"
+    semver "^7.3.5"
+
 "@ledgerhq/errors@^6.14.0":
   version "6.14.0"
   resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-6.14.0.tgz#0bf253983773ef12eebce2091f463bc719223b37"
   integrity sha512-ZWJw2Ti6Dq1Ott/+qYqJdDWeZm16qI3VNG5rFlb0TQ3UcAyLIQZbnnzzdcVVwVeZiEp66WIpINd/pBdqsHVyOA==
 
-"@ledgerhq/hw-transport-webhid@^6.27.19":
-  version "6.27.19"
-  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-6.27.19.tgz#5a655b497258d94ec6494db7b56e17dd0c610638"
-  integrity sha512-RMnktayqqLE2uFQDw9TKoW+WSP8KnT0ElKcIISf3sXVrzHD2y0moPk/wXOzGfi+cgN4uiKy86UD/5mgz3wlm6Q==
-  dependencies:
-    "@ledgerhq/devices" "^8.0.7"
-    "@ledgerhq/errors" "^6.14.0"
-    "@ledgerhq/hw-transport" "^6.28.8"
-    "@ledgerhq/logs" "^6.10.1"
+"@ledgerhq/errors@^6.15.0":
+  version "6.15.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/errors/-/errors-6.15.0.tgz#45cda73915f695cc072cb8a99650830bc5dc6668"
+  integrity sha512-6xaw5/mgoht62TnL3rXsaQYEFwpnXyNDk1AOSJksIjFHx9bHUnkyVmrnGQDj0JLzi+E7bHEgTrpCs8wpeDh9jA==
 
-"@ledgerhq/hw-transport@^6.27.1", "@ledgerhq/hw-transport@^6.28.8":
+"@ledgerhq/hw-transport-webhid@^6.27.19", "@ledgerhq/hw-transport-webhid@^6.27.20":
+  version "6.27.20"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport-webhid/-/hw-transport-webhid-6.27.20.tgz#87f83e42ea0e4cb5c6e87dbfc6e5e45d125eb68f"
+  integrity sha512-zNZgTTpbPFBHgzQRqVl3+Y0ySOFkEIGxxHT1y+AgSxRmoLgfzsBQgYy6z3jZZyJQ92B8Tl95hAvMm9vo7IqxWA==
+  dependencies:
+    "@ledgerhq/devices" "^8.0.8"
+    "@ledgerhq/errors" "^6.15.0"
+    "@ledgerhq/hw-transport" "^6.29.0"
+    "@ledgerhq/logs" "^6.11.0"
+
+"@ledgerhq/hw-transport@^6.27.1":
   version "6.28.8"
   resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-6.28.8.tgz#f99a5c71c5c09591e9bfb1b970c42aafbe81351f"
   integrity sha512-XxQVl4htd018u/M66r0iu5nlHi+J6QfdPsORzDF6N39jaz+tMqItb7tUlXM/isggcuS5lc7GJo7NOuJ8rvHZaQ==
@@ -525,10 +547,25 @@
     "@ledgerhq/errors" "^6.14.0"
     events "^3.3.0"
 
+"@ledgerhq/hw-transport@^6.29.0":
+  version "6.29.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/hw-transport/-/hw-transport-6.29.0.tgz#2b85f39d90b093930f0c7bfc513b29eb47ba97fa"
+  integrity sha512-WQfzxt3EnnbOmzZVYiCgSmNsqafBOFQn40awvUPY2IZviJRs23/1ANPHAo76bzPV88+Qk0+1wZlcnIanGN6fFA==
+  dependencies:
+    "@ledgerhq/devices" "^8.0.8"
+    "@ledgerhq/errors" "^6.15.0"
+    "@ledgerhq/logs" "^6.11.0"
+    events "^3.3.0"
+
 "@ledgerhq/logs@^6.10.1":
   version "6.10.1"
   resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-6.10.1.tgz#5bd16082261d7364eabb511c788f00937dac588d"
   integrity sha512-z+ILK8Q3y+nfUl43ctCPuR4Y2bIxk/ooCQFwZxhtci1EhAtMDzMAx2W25qx8G1PPL9UUOdnUax19+F0OjXoj4w==
+
+"@ledgerhq/logs@^6.11.0":
+  version "6.11.0"
+  resolved "https://registry.yarnpkg.com/@ledgerhq/logs/-/logs-6.11.0.tgz#0d28e7edcf71548506f4304686cba480ba91bbcf"
+  integrity sha512-HHK9y4GGe4X7CXbRUCh7z8Mp+WggpJn1dmUjmuk1rNugESF6o8nAOnXA+BxwtRRNV3CgNJR3Wxdos4J9qV0Zsg==
 
 "@lit-labs/ssr-dom-shim@^1.0.0", "@lit-labs/ssr-dom-shim@^1.1.0":
   version "1.1.2"
@@ -587,40 +624,55 @@
     picocolors "^1.0.0"
     tslib "^2.6.0"
 
-"@polkadot-cloud/assets@0.1.32", "@polkadot-cloud/assets@^0.1.32":
-  version "0.1.32"
-  resolved "https://registry.yarnpkg.com/@polkadot-cloud/assets/-/assets-0.1.32.tgz#b619e24db310ac9a23e4bb20a64245f096b73072"
-  integrity sha512-TC8m6RFbHtJ5omW4VuIugKp1u7YzGBIgG9vGVEXkeSMWKwgzvkrxn7qpcjcelu1XO8ujb/+64dnhIpuhdj4e9g==
+"@polkadot-cloud/assets@0.1.34", "@polkadot-cloud/assets@^0.1.32":
+  version "0.1.34"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/assets/-/assets-0.1.34.tgz#a88c7066228d2e9229a026e9f86436ceae357737"
+  integrity sha512-qsXlinOgVlChbMTdBXCDaQM59jDZWrKKMizR7LR8qL2yhzLh0Ohouf0POURhuCsJ1zUjHwbsZg+4ezsKZBM+nA==
 
-"@polkadot-cloud/core@^1.0.30":
-  version "1.0.30"
-  resolved "https://registry.yarnpkg.com/@polkadot-cloud/core/-/core-1.0.30.tgz#cc1e3f3477f402b8842338ed3e2ea4bfe8b19a23"
-  integrity sha512-hn3oo/JK17W5alwXPxL5M0zmZidihjklEsYv7hXF7XqWZP9musntdn5LydzHz0J7m05OTnH+9tw/GNusvqBaSg==
+"@polkadot-cloud/core@^1.0.30", "@polkadot-cloud/core@^1.0.45":
+  version "1.0.45"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/core/-/core-1.0.45.tgz#7617e7803f64a4c933fa2b63038acfc9f8f9597d"
+  integrity sha512-rtVQlaVnvqHiMW4CreowspZG+JXZQYMLjMXY3i9vRRnBcVa09D7ahNRbj6RixmUSSNADtQJS9AaQNMz6nJuyAQ==
 
-"@polkadot-cloud/react@^0.1.102":
-  version "0.1.102"
-  resolved "https://registry.yarnpkg.com/@polkadot-cloud/react/-/react-0.1.102.tgz#ed492d5c0dafb46947ed34aa0c84ec5bacd87f52"
-  integrity sha512-4RF1j34iMqgSVRReBm2noj23uihvxpgetg49FKbch+YmtSJByBJY4NLrMFgvmIBug3PqBdg+yL0Em7G7emevYg==
+"@polkadot-cloud/react@^0.1.127":
+  version "0.1.127"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/react/-/react-0.1.127.tgz#142a6bbc0bb62958a11391121f342ba29a9422ce"
+  integrity sha512-1jUmMCl7Kw2XsCAadU5xEzNNIs5L2Lf2PelgMQhmoYW35Hug6XW81iaOYqKJQRZv5JnnnxCWgmfkq7QLsQCaRQ==
   dependencies:
     "@chainsafe/metamask-polkadot-adapter" "^0.5.1"
+    "@chainsafe/metamask-polkadot-types" "^0.6.0"
     "@fortawesome/fontawesome-svg-core" "^6.4.2"
     "@fortawesome/free-brands-svg-icons" "^6.4.2"
     "@fortawesome/free-regular-svg-icons" "^6.4.2"
     "@fortawesome/free-solid-svg-icons" "^6.4.2"
     "@fortawesome/react-fontawesome" "^0.2.0"
-    "@polkadot-cloud/assets" "0.1.32"
-    "@polkadot-cloud/core" "^1.0.30"
-    "@polkadot-cloud/utils" "^0.0.23"
+    "@ledgerhq/hw-transport-webhid" "^6.27.20"
+    "@polkadot-cloud/assets" "0.1.34"
+    "@polkadot-cloud/core" "^1.0.45"
+    "@polkadot-cloud/utils" "^0.0.25"
     "@polkadot/keyring" "^12.5.1"
     "@polkadot/util" "^12.5.1"
     "@polkadot/util-crypto" "^12.5.1"
+    "@zondax/ledger-substrate" "^0.41.3"
+    buffer "^6.0.3"
     framer-motion "^10.15.0"
+    qrcode-generator "^1.4.4"
     react-error-boundary "^4.0.11"
+    react-qr-reader "^2.2.1"
 
 "@polkadot-cloud/utils@^0.0.23":
   version "0.0.23"
   resolved "https://registry.yarnpkg.com/@polkadot-cloud/utils/-/utils-0.0.23.tgz#eb703f74c7f05f763f7624727ba83589131ae1c5"
   integrity sha512-IWqtn/cBgxletCH+MqBwZhxPxEbFLhfCU6L4RmCSCoes0bC1xUHMtFevPiJuaEkXQTdFvOnosA8BbSI01/GUuA==
+  dependencies:
+    "@polkadot/keyring" "^12.5.1"
+    "@polkadot/util" "^12.5.1"
+    bignumber.js "^9.1.1"
+
+"@polkadot-cloud/utils@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/utils/-/utils-0.0.25.tgz#8c4f8a9a64942f4397a6368c2093ddd4feab2b4a"
+  integrity sha512-UlNEH8SYseJT6ZBNljE4dNYrRecCgbc7MMn2+Des6AXXUJb88HPQ39hSE1aJwDiq43wrnff2BQadnxqV9orf7g==
   dependencies:
     "@polkadot/keyring" "^12.5.1"
     "@polkadot/util" "^12.5.1"
@@ -4092,7 +4144,7 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
 
-qrcode-generator@1.4.4:
+qrcode-generator@1.4.4, qrcode-generator@^1.4.4:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/qrcode-generator/-/qrcode-generator-1.4.4.tgz#63f771224854759329a99048806a53ed278740e7"
   integrity sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==
