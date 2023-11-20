@@ -587,20 +587,20 @@
     picocolors "^1.0.0"
     tslib "^2.6.0"
 
-"@polkadot-cloud/assets@0.1.32", "@polkadot-cloud/assets@^0.1.32":
-  version "0.1.32"
-  resolved "https://registry.yarnpkg.com/@polkadot-cloud/assets/-/assets-0.1.32.tgz#b619e24db310ac9a23e4bb20a64245f096b73072"
-  integrity sha512-TC8m6RFbHtJ5omW4VuIugKp1u7YzGBIgG9vGVEXkeSMWKwgzvkrxn7qpcjcelu1XO8ujb/+64dnhIpuhdj4e9g==
+"@polkadot-cloud/assets@0.1.34", "@polkadot-cloud/assets@^0.1.32":
+  version "0.1.34"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/assets/-/assets-0.1.34.tgz#a88c7066228d2e9229a026e9f86436ceae357737"
+  integrity sha512-qsXlinOgVlChbMTdBXCDaQM59jDZWrKKMizR7LR8qL2yhzLh0Ohouf0POURhuCsJ1zUjHwbsZg+4ezsKZBM+nA==
 
-"@polkadot-cloud/core@^1.0.30":
-  version "1.0.30"
-  resolved "https://registry.yarnpkg.com/@polkadot-cloud/core/-/core-1.0.30.tgz#cc1e3f3477f402b8842338ed3e2ea4bfe8b19a23"
-  integrity sha512-hn3oo/JK17W5alwXPxL5M0zmZidihjklEsYv7hXF7XqWZP9musntdn5LydzHz0J7m05OTnH+9tw/GNusvqBaSg==
+"@polkadot-cloud/core@^1.0.30", "@polkadot-cloud/core@^1.0.48":
+  version "1.0.48"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/core/-/core-1.0.48.tgz#aa04ff6a4b8a45d8c39dc3e232936299a44d85c7"
+  integrity sha512-YeYS6OR6AxVV0Y1+FFCy0mLeL+Xxn7siYXjNm6XtTrcna0kALnQTKM8udedawwkMJujMxhQhfSWVP8i1HQT6hw==
 
-"@polkadot-cloud/react@^0.1.102":
-  version "0.1.102"
-  resolved "https://registry.yarnpkg.com/@polkadot-cloud/react/-/react-0.1.102.tgz#ed492d5c0dafb46947ed34aa0c84ec5bacd87f52"
-  integrity sha512-4RF1j34iMqgSVRReBm2noj23uihvxpgetg49FKbch+YmtSJByBJY4NLrMFgvmIBug3PqBdg+yL0Em7G7emevYg==
+"@polkadot-cloud/react@^0.1.134":
+  version "0.1.134"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/react/-/react-0.1.134.tgz#4c5beb175cdaf3989a71cf34030b09104674b265"
+  integrity sha512-VBulrqaaWYnf42K/YtSnlEhjaNocCNXOWaesegkfVe9rCOb5Pl7IbPd0EGQhKoyIp4KKx0yo1BypF/ZmYCPHRA==
   dependencies:
     "@chainsafe/metamask-polkadot-adapter" "^0.5.1"
     "@fortawesome/fontawesome-svg-core" "^6.4.2"
@@ -608,19 +608,27 @@
     "@fortawesome/free-regular-svg-icons" "^6.4.2"
     "@fortawesome/free-solid-svg-icons" "^6.4.2"
     "@fortawesome/react-fontawesome" "^0.2.0"
-    "@polkadot-cloud/assets" "0.1.32"
-    "@polkadot-cloud/core" "^1.0.30"
-    "@polkadot-cloud/utils" "^0.0.23"
+    "@polkadot-cloud/assets" "0.1.34"
+    "@polkadot-cloud/core" "^1.0.48"
+    "@polkadot-cloud/utils" "^0.0.25"
     "@polkadot/keyring" "^12.5.1"
     "@polkadot/util" "^12.5.1"
     "@polkadot/util-crypto" "^12.5.1"
-    framer-motion "^10.15.0"
-    react-error-boundary "^4.0.11"
+    framer-motion "^10.16.5"
 
 "@polkadot-cloud/utils@^0.0.23":
   version "0.0.23"
   resolved "https://registry.yarnpkg.com/@polkadot-cloud/utils/-/utils-0.0.23.tgz#eb703f74c7f05f763f7624727ba83589131ae1c5"
   integrity sha512-IWqtn/cBgxletCH+MqBwZhxPxEbFLhfCU6L4RmCSCoes0bC1xUHMtFevPiJuaEkXQTdFvOnosA8BbSI01/GUuA==
+  dependencies:
+    "@polkadot/keyring" "^12.5.1"
+    "@polkadot/util" "^12.5.1"
+    bignumber.js "^9.1.1"
+
+"@polkadot-cloud/utils@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@polkadot-cloud/utils/-/utils-0.0.25.tgz#8c4f8a9a64942f4397a6368c2093ddd4feab2b4a"
+  integrity sha512-UlNEH8SYseJT6ZBNljE4dNYrRecCgbc7MMn2+Des6AXXUJb88HPQ39hSE1aJwDiq43wrnff2BQadnxqV9orf7g==
   dependencies:
     "@polkadot/keyring" "^12.5.1"
     "@polkadot/util" "^12.5.1"
@@ -2799,10 +2807,10 @@ formdata-polyfill@^4.0.10:
   dependencies:
     fetch-blob "^3.1.2"
 
-framer-motion@^10.15.0, framer-motion@^10.16.3:
-  version "10.16.4"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.16.4.tgz#30279ef5499b8d85db3a298ee25c83429933e9f8"
-  integrity sha512-p9V9nGomS3m6/CALXqv6nFGMuFOxbWsmaOrdmhyQimMIlLl3LC7h7l86wge/Js/8cRu5ktutS/zlzgR7eBOtFA==
+framer-motion@^10.16.3, framer-motion@^10.16.5:
+  version "10.16.5"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-10.16.5.tgz#f1ad625adf213a8906f1ea52a31a4ef222f056d5"
+  integrity sha512-GEzVjOYP2MIpV9bT/GbhcsBNoImG3/2X3O/xVNWmktkv9MdJ7P/44zELm/7Fjb+O3v39SmKFnoDQB32giThzpg==
   dependencies:
     tslib "^2.4.0"
   optionalDependencies:
