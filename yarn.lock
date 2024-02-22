@@ -6342,7 +6342,7 @@ __metadata:
     sass: "npm:^1.70.0"
     styled-components: "npm:^6.1.8"
     typescript: "npm:^5.3.3"
-    usehooks-ts: "npm:2.13.0"
+    usehooks-ts: "npm:2.15.0"
     vite: "npm:^5.0.12"
     vite-bundle-visualizer: "npm:^1.0.1"
     vite-plugin-checker: "npm:^0.6.3"
@@ -7961,14 +7961,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"usehooks-ts@npm:2.13.0":
-  version: 2.13.0
-  resolution: "usehooks-ts@npm:2.13.0"
+"usehooks-ts@npm:2.15.0":
+  version: 2.15.0
+  resolution: "usehooks-ts@npm:2.15.0"
   dependencies:
     lodash.debounce: "npm:^4.0.8"
   peerDependencies:
     react: ^16.8.0  || ^17 || ^18
-  checksum: 3924bb1f9f4baee08e84b4bc311ea14492ed19db2c38d1b54c542fc45e5da6a48b4469da9281339ad7a0de76184ebf5d8de9d654dc25aceb2ccc88a4e6db115a
+  checksum: 70a2c9b5b256681c5c82c28407bcb0444f10bef26de823d13ffa6a3d7a0e39243738ab8957f6515018f62cf98a6ec97e73677b9cd3ab4a4734977bf76b07dc21
   languageName: node
   linkType: hard
 
