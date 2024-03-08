@@ -293,13 +293,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@dotlottie/player-component@npm:^2.7.10":
-  version: 2.7.10
-  resolution: "@dotlottie/player-component@npm:2.7.10"
+"@dotlottie/player-component@npm:^2.7.11":
+  version: 2.7.11
+  resolution: "@dotlottie/player-component@npm:2.7.11"
   dependencies:
     "@dotlottie/common": "npm:0.7.10"
     lit: "npm:^2.7.5"
-  checksum: 39581d015b48d970c706aca3b20dff4f75e873dbb687ece49cc33ddb0b27dc7cbf79bc321f74fc60f4388eee71539c1fcd6cc99889646a596710da778b761688
+  checksum: 55d686a1ab0f5339e7c4e43c03b559fa6830d71aa90ef6a23e08a5b5d5bccfe29275c81f06efa07d0a44dab34e46c809e873a2da3ab6110470e63c0f38e07b7b
   languageName: node
   linkType: hard
 
@@ -6500,7 +6500,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "polkadot-staking-dashboard@workspace:."
   dependencies:
-    "@dotlottie/player-component": "npm:^2.7.10"
+    "@dotlottie/player-component": "npm:^2.7.11"
     "@fortawesome/fontawesome-svg-core": "npm:^6.5.1"
     "@fortawesome/free-brands-svg-icons": "npm:^6.5.1"
     "@fortawesome/free-regular-svg-icons": "npm:^6.5.1"
