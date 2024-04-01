@@ -893,15 +893,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ledgerhq/devices@npm:^8.2.1":
-  version: 8.2.1
-  resolution: "@ledgerhq/devices@npm:8.2.1"
+"@ledgerhq/devices@npm:^8.2.2":
+  version: 8.2.2
+  resolution: "@ledgerhq/devices@npm:8.2.2"
   dependencies:
-    "@ledgerhq/errors": "npm:^6.16.2"
+    "@ledgerhq/errors": "npm:^6.16.3"
     "@ledgerhq/logs": "npm:^6.12.0"
     rxjs: "npm:^7.8.1"
     semver: "npm:^7.3.5"
-  checksum: a627a4fa349f2db4e0d989a015532eacb95cbb94e162a81bfe1412171be583ec2be04b83b99f3bdcec35dd7ec9ae4e03ada1b7e7a144d74433cc65e20ebb4275
+  checksum: c9bd63858ac4ce37a8e8fa3523ec1ed343b381d9711404d4334ef89d8cc8898af85e951b48ad962dce9a9c98344f0942393b69e52627cc34ec6e1b0dc93a5bbd
   languageName: node
   linkType: hard
 
@@ -912,22 +912,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ledgerhq/errors@npm:^6.16.2":
-  version: 6.16.2
-  resolution: "@ledgerhq/errors@npm:6.16.2"
-  checksum: 8f4e819146a71ca09e91b187b540b03e41f7ebf4e23d708278a26edb9f821c1b643d7db7b9f253d3f886cfd489adfae1a7ac73714866bdd8ce0116b792e6f4fb
+"@ledgerhq/errors@npm:^6.16.3":
+  version: 6.16.3
+  resolution: "@ledgerhq/errors@npm:6.16.3"
+  checksum: 12e8e39317aac45694ae0f01f20b870a933611cd31187fc6ff63f268154b58f99d34b02f5dc033cbe3aebbe6fbfcd6f19aea842b7de22b5d8e051aef2fb94f94
   languageName: node
   linkType: hard
 
-"@ledgerhq/hw-transport-webhid@npm:^6.28.4":
-  version: 6.28.4
-  resolution: "@ledgerhq/hw-transport-webhid@npm:6.28.4"
+"@ledgerhq/hw-transport-webhid@npm:^6.28.5":
+  version: 6.28.5
+  resolution: "@ledgerhq/hw-transport-webhid@npm:6.28.5"
   dependencies:
-    "@ledgerhq/devices": "npm:^8.2.1"
-    "@ledgerhq/errors": "npm:^6.16.2"
-    "@ledgerhq/hw-transport": "npm:^6.30.4"
+    "@ledgerhq/devices": "npm:^8.2.2"
+    "@ledgerhq/errors": "npm:^6.16.3"
+    "@ledgerhq/hw-transport": "npm:^6.30.5"
     "@ledgerhq/logs": "npm:^6.12.0"
-  checksum: d7a42aedfac5d881c2404c1534bdc2bcd57575b69be67d27c2106b1912cec338fa1b85fe319f938d7e58bf29022ee2693be056d3bbca117d5cb58eec6c059760
+  checksum: e9233f83b9f5ee4ab480ffd894c44251c85d6a11c2591665ee5b91ce0997316a822bbd52ca9129736f074df5d809df576c528fd009a309652c1cc1bb41fe4862
   languageName: node
   linkType: hard
 
@@ -943,15 +943,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ledgerhq/hw-transport@npm:^6.30.4":
-  version: 6.30.4
-  resolution: "@ledgerhq/hw-transport@npm:6.30.4"
+"@ledgerhq/hw-transport@npm:^6.30.5":
+  version: 6.30.5
+  resolution: "@ledgerhq/hw-transport@npm:6.30.5"
   dependencies:
-    "@ledgerhq/devices": "npm:^8.2.1"
-    "@ledgerhq/errors": "npm:^6.16.2"
+    "@ledgerhq/devices": "npm:^8.2.2"
+    "@ledgerhq/errors": "npm:^6.16.3"
     "@ledgerhq/logs": "npm:^6.12.0"
     events: "npm:^3.3.0"
-  checksum: 2e948435f880e36c3f703ffe1aee75c278980527ebb1dcc5e8541db21bfa15aa4dded9962ac7ced21f9339a4cf711268a6cc480301d22cee6467b008114dafcb
+  checksum: ef80bb7d5839e3f2dc278fc4aaa2a2e74766cce80cfc0c42958601ce231ce576e2cd318ead971aa09263e43592160a5256a945ccb31dc542a341ad26f871102f
   languageName: node
   linkType: hard
 
@@ -6506,7 +6506,7 @@ __metadata:
     "@fortawesome/free-regular-svg-icons": "npm:^6.5.1"
     "@fortawesome/free-solid-svg-icons": "npm:^6.5.1"
     "@fortawesome/react-fontawesome": "npm:^0.2.0"
-    "@ledgerhq/hw-transport-webhid": "npm:^6.28.4"
+    "@ledgerhq/hw-transport-webhid": "npm:^6.28.5"
     "@ledgerhq/logs": "npm:^6.12.0"
     "@polkadot/api": "npm:^10.11.3"
     "@polkadot/keyring": "npm:^12.6.2"
